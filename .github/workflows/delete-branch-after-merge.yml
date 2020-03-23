@@ -10,5 +10,3 @@ jobs:
     steps:
       - uses: ministryofjustice/github-actions/branch-deleter@master
         if: github.event.pull_request.merged == true
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTIONS_TOKEN }}
