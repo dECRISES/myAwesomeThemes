@@ -1,14 +1,1 @@
-name: Delete branch after merge
 
-on:
-  pull_request:
-    types: [closed]
-
-jobs:
-  delete-branch-after-merge:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ministryofjustice/github-actions/branch-deleter@master
-        if: github.event.pull_request.merged == true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTIONS_TOKEN }}
