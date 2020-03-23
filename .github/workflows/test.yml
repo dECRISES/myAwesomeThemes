@@ -1,7 +1,8 @@
 name: on pull request merge, delete the branch
 
 on:
-  pull_request
+  pull_request:
+    branches: [ master ]
 
 jobs:
   delete-branch-after-merge:
